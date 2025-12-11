@@ -5,8 +5,8 @@
 *(Note: If the image doesn't load here, check the "Screenshots" section below)*
 
 ## 📋 Table of Contents
-* [About the App](#about-the-app)
-* [Student Information](#student-information)
+* [About the App](#about)
+* [Student Information](#student)
 * [Features](#features)
 * [Screenshots](#screenshots)
 * [Installation](#installation)
@@ -14,7 +14,7 @@
 
 ---
 
-## 📱 About the App
+## <a name="about"></a>📱 About the App
 **SmartDividend** is a native Android application designed to help investors calculate their returns from Unit Trust investments. It was developed as an individual assignment for the **Mobile Technology and Development** course.
 
 The app accurately calculates:
@@ -25,18 +25,18 @@ It features a modern, responsive "Mobile First" UI built with Material Design co
 
 ---
 
-## 👨‍🎓 Student Information
-| Field | Detail                                        |
-| :--- |:----------------------------------------------|
-| **Name** | Faris Haiqal Bin Noor Firdaus                 |
-| **Matric No** | 2023261166                                    |
-| **Course Code** | ICT602                                        |
+## <a name="student"></a>👨‍🎓 Student Information
+| Field | Detail |
+| :--- | :--- |
+| **Name** | Faris Haiqal Bin Noor Firdaus |
+| **Matric No** | 2023261166 |
+| **Course Code** | ICT602 |
 | **Faculty** | Faculty of Computer and Mathematical Sciences |
-| **University** | Universiti Teknologi MARA (UiTM)              |
+| **University** | Universiti Teknologi MARA (UiTM) |
 
 ---
 
-## ✨ Features
+## <a name="features"></a>✨ Features
 * **Smart Calculation:** Instant processing of investment formulas.
 * **Input Validation:** Ensures months do not exceed 12 and fields are not empty.
 * **Modern UI:** Features a gradient background, card-based layout, and animations.
@@ -45,7 +45,7 @@ It features a modern, responsive "Mobile First" UI built with Material Design co
 
 ---
 
-## 📸 Screenshots
+## <a name="screenshots"></a>📸 Screenshots
 
 | Home Screen | Result & Validation | About Page |
 | :---: | :---: | :---: |
@@ -55,13 +55,13 @@ It features a modern, responsive "Mobile First" UI built with Material Design co
 
 ---
 
-## ⬇️ Installation
+## <a name="installation"></a>⬇️ Installation
 You can download the latest stable version (APK) from the Releases page:
 [**Download SmartDividend v1.0**](https://github.com/farishaiqal124/SmartDividend/releases)
 
 ---
 
-## 🛠 Requirements
+## <a name="requirements"></a>🛠 Requirements
 * **Android Version:** Android 7.0 (Nougat) or higher.
 * **Internet:** Not required for calculation (Offline capable).
 
