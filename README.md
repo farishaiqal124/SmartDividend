@@ -59,7 +59,7 @@ It features a modern, responsive "Mobile First" UI built with Material Design co
 ## <a name="video"></a>📺 Video Presentation
 A complete demonstration of **SmartDividend**, covering the UI design, functionality test cases, and code walkthrough.
 
-[**▶️ Click Here to Watch the Presentation**](INSERT_YOUR_YOUTUBE_LINK_HERE)
+[**▶️ Click Here to Watch the Presentation**](https://youtu.be/acNxRog-_8k?si=6aRXhESua0PSZEJt)
 
 ---
 
