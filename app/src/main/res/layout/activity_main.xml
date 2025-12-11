@@ -1,85 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    android:background="@drawable/background_gradient">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="24dp">
+        android:padding="32dp"
+        android:gravity="center_vertical">
 
         <TextView
             android:id="@+id/tvTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Unit Trust Calculator"
-            android:textSize="28sp"
+            android:text="SmartDividend"
+            android:textSize="36sp"
             android:textStyle="bold"
-            android:textColor="@color/black"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:layout_marginBottom="4dp"
+            android:shadowColor="#40000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="4"/>
+
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Grow your wealth today"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
             android:gravity="center"
             android:layout_marginBottom="32dp"/>
 
-        <com.google.android.material.textfield.TextInputLayout
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Invested Fund Amount (RM)"
-            android:layout_marginBottom="16dp">
+            app:cardCornerRadius="24dp"
+            app:cardElevation="12dp"
+            app:cardBackgroundColor="@android:color/white">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etAmount"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="numberDecimal"/>
-        </com.google.android.material.textfield.TextInputLayout>
+                android:orientation="vertical"
+                android:padding="28dp">
 
-        <com.google.android.material.textfield.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Invested Fund (RM)"
+                    android:textColorHint="#424242"
+                    app:startIconDrawable="@android:drawable/ic_menu_crop"
+                    app:startIconTint="#424242"
+                    app:boxBackgroundColor="#F5F5F5"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxStrokeWidth="0dp"
+                    android:layout_marginBottom="16dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:inputType="numberDecimal"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Annual Rate (%)"
+                    android:textColorHint="#424242"
+                    app:startIconDrawable="@android:drawable/ic_menu_info_details"
+                    app:startIconTint="#424242"
+                    app:boxBackgroundColor="#F5F5F5"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxStrokeWidth="0dp"
+                    android:layout_marginBottom="16dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etRate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:inputType="numberDecimal"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Months (Max 12)"
+                    android:textColorHint="#424242"
+                    app:startIconDrawable="@android:drawable/ic_menu_my_calendar"
+                    app:startIconTint="#424242"
+                    app:boxBackgroundColor="#F5F5F5"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxStrokeWidth="0dp"
+                    android:layout_marginBottom="24dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etMonths"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:inputType="number"
+                        android:maxLength="2"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btnCalculate"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="CALCULATE RETURNS"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    app:cornerRadius="30dp"
+                    android:backgroundTint="#005BEA"/>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardResult"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Annual Dividend Rate (%)"
-            android:layout_marginBottom="16dp">
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="#CCFFFFFF"
+            android:visibility="invisible">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etRate"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="numberDecimal"/>
-        </com.google.android.material.textfield.TextInputLayout>
+                android:padding="24dp"
+                android:gravity="center">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Months Invested (Max 12)"
-            android:layout_marginBottom="24dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/etMonths"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:maxLength="2"/>
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <Button
-            android:id="@+id/btnCalculate"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:text="CALCULATE DIVIDEND"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="24dp"/>
-
-        <TextView
-            android:id="@+id/tvResult"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Total Dividend: RM 0.00"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:background="#E0E0E0"
-            android:padding="16dp"/>
+                <TextView
+                    android:id="@+id/tvResult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RM 0.00"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    android:textColor="#0D47A1"/> </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
 
     </LinearLayout>
 </ScrollView>

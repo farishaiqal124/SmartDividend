@@ -10,13 +10,13 @@
         android:id="@+id/imgIcon"
         android:layout_width="120dp"
         android:layout_height="120dp"
-        android:src="@mipmap/ic_launcher"
+        android:src="@drawable/smart_dividend_logo"
         android:layout_marginBottom="24dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Unit Trust Calculator"
+        android:text="SmartDividend"
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_marginBottom="32dp"/>
@@ -31,19 +31,19 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="YOUR NAME HERE"
+        android:text="Faris Haiqal Bin Noor Firdaus"
         android:textSize="18sp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="YOUR MATRIC NO"
+        android:text="2023261166"
         android:textSize="18sp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="YOUR COURSE CODE"
+        android:text="ICT602"
         android:textSize="18sp"
         android:layout_marginBottom="32dp"/>
 
@@ -58,7 +58,7 @@
         android:id="@+id/tvGithub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="https://github.com/yourusername/UnitTrustApp"
+        android:text="https://github.com/farishaiqal124/SmartDividend"
         android:autoLink="web"
         android:textColor="#2196F3"
         android:textSize="16sp"

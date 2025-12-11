@@ -1,4 +1,4 @@
-package com.example.unittrustcalculator; // Make sure this matches your package name!
+package com.example.unittrustcalculator; // UPDATE THIS IF YOUR PACKAGE NAME IS DIFFERENT
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private TextInputEditText etAmount, etRate, etMonths;
     private TextView tvResult;
     private Button btnCalculate;
+    private View cardResult; // Reference to the green result card
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,11 +29,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // 1. Initialize UI components
+        // These IDs must match your activity_main.xml exactly
         etAmount = findViewById(R.id.etAmount);
         etRate = findViewById(R.id.etRate);
         etMonths = findViewById(R.id.etMonths);
         tvResult = findViewById(R.id.tvResult);
         btnCalculate = findViewById(R.id.btnCalculate);
+        cardResult = findViewById(R.id.cardResult); // The hidden card
 
         // 2. Set Click Listener for the Calculate Button
         btnCalculate.setOnClickListener(new View.OnClickListener() {
@@ -70,9 +73,9 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        // CALCULATION LOGIC [cite: 9, 10]
-        // Note: We divide rate by 100 because user enters "5" for 5%
+        // CALCULATION LOGIC
         // Formula: (Rate / 12) * Invested Fund
+        // We divide rate by 100 because user enters "5" for 5%
         double monthlyRate = (rate / 100) / 12;
         double monthlyDividend = monthlyRate * amount;
 
@@ -80,9 +83,28 @@ public class MainActivity extends AppCompatActivity {
         double totalDividend = monthlyDividend * months;
 
         // DISPLAY RESULT
-        // Formatting to 2 decimal places [cite: 11]
-        String resultText = String.format(Locale.getDefault(), "Total Dividend: RM %.2f", totalDividend);
+        // Formatting to 2 decimal places (RM 2500.00)
+        String resultText = String.format(Locale.getDefault(), "Total Dividend:\nRM %.2f", totalDividend);
         tvResult.setText(resultText);
+
+        // --- ANIMATION START ---
+        // This makes the card slide up from the bottom
+
+        // 1. Make the card visible
+        cardResult.setVisibility(View.VISIBLE);
+
+        // 2. Reset position (push it down 100 pixels and make it invisible)
+        cardResult.setTranslationY(100f);
+        cardResult.setAlpha(0f);
+
+        // 3. Animate it moving UP to normal position (0f) and Fading IN (alpha 1f)
+        cardResult.animate()
+                .translationY(0f)
+                .alpha(1f)
+                .setDuration(500) // Animation takes 0.5 seconds
+                .setInterpolator(new android.view.animation.DecelerateInterpolator())
+                .start();
+        // --- ANIMATION END ---
     }
 
     // --- NAVIGATION MENU SETUP ---
@@ -105,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
             return true;
         } else if (id == R.id.action_home) {
-            // We are already home, do nothing or show toast
+            // We are already home, show a small message
             Toast.makeText(this, "You are on the Home screen", Toast.LENGTH_SHORT).show();
             return true;
         }
