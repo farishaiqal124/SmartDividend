@@ -68,4 +68,4 @@ You can download the latest stable version (APK) from the Releases page:
 ---
 
 ## © Copyright
-© 2025 FARIS HAIQAL BIN NOOR FIRDAUS. All Rights Reserved.
+© 2025 Faris Haiqal Bin Noor Firdaus. All Rights Reserved.
