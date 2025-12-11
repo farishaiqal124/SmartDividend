@@ -109,6 +109,7 @@
                 app:icon="@android:drawable/ic_menu_share"
                 android:layout_marginBottom="16dp"/>
 
+
             <TextView
                 android:id="@+id/tvGithub"
                 android:layout_width="wrap_content"
