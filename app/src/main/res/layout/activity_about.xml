@@ -1,74 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/background_gradient"> <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="32dp"
-    android:gravity="center_horizontal">
-
-    <ImageView
-        android:id="@+id/imgIcon"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:src="@drawable/smart_dividend_logo"
-        android:layout_marginBottom="24dp"/>
+    android:gravity="center">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SmartDividend"
-        android:textSize="24sp"
+        android:text="About App"
+        android:textSize="32sp"
         android:textStyle="bold"
-        android:layout_marginBottom="32dp"/>
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="24dp"
+        android:shadowColor="#40000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"/>
 
-    <TextView
-        android:layout_width="wrap_content"
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Developed by:"
-        android:textStyle="bold"
-        android:textSize="18sp"/>
+        app:cardCornerRadius="24dp"
+        app:cardElevation="12dp"
+        app:cardBackgroundColor="@android:color/white">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Faris Haiqal Bin Noor Firdaus"
-        android:textSize="18sp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="32dp"
+            android:gravity="center_horizontal">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="2023261166"
-        android:textSize="18sp"/>
+            <ImageView
+                android:id="@+id/imgIcon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/smart_dividend_logo"
+                android:layout_marginBottom="16dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SmartDividend"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#005BEA"
+                android:layout_marginBottom="4dp"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ICT602"
-        android:textSize="18sp"
-        android:layout_marginBottom="32dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Version 1.0"
+                android:textSize="14sp"
+                android:textColor="#757575"
+                android:layout_marginBottom="32dp"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="GitHub Repository"
-        android:textStyle="bold"
-        android:layout_marginBottom="8dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:layout_marginBottom="24dp"/>
 
-    <TextView
-        android:id="@+id/tvGithub"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="https://github.com/farishaiqal124/SmartDividend"
-        android:autoLink="web"
-        android:textColor="#2196F3"
-        android:textSize="16sp"
-        android:layout_marginBottom="48dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Developed by"
+                android:textAllCaps="true"
+                android:textSize="12sp"
+                android:textColor="#9E9E9E"
+                android:letterSpacing="0.1"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="© 2025 All Rights Reserved"
-        android:textSize="14sp"
-        android:textColor="#757575"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FARIS HAIQAL BIN NOOR FIRDAUS"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#212121"
+                android:layout_marginTop="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2023261166"
+                android:textSize="16sp"
+                android:textColor="#616161"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CDCS2405A / ICT602"
+                android:textSize="16sp"
+                android:textColor="#616161"
+                android:layout_marginBottom="32dp"/>
+
+            <Button
+                android:id="@+id/btnGithub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="View on GitHub"
+                android:backgroundTint="#005BEA"
+                app:icon="@android:drawable/ic_menu_share"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:id="@+id/tvGithub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="https://github.com/farishaiqal124/SmartDividend"
+                android:autoLink="web"
+                android:textColor="#005BEA"
+                android:visibility="visible"
+                android:gravity="center"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="© 2025 All Rights Reserved"
+                android:textSize="12sp"
+                android:textColor="#9E9E9E"
+                android:layout_marginTop="24dp"/>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
 
 </LinearLayout>
+</ScrollView>

@@ -1,4 +1,4 @@
-package com.example.unittrustcalculator;
+package com.example.smartdividend;
 
 import org.junit.Test;
 

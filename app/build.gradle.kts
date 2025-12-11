@@ -3,13 +3,13 @@ plugins {
 }
 
 android {
-    namespace = "com.example.unittrustcalculator"
+    namespace = "com.example.smartdividend"
     compileSdk {
         version = release(36)
     }
 
     defaultConfig {
-        applicationId = "com.example.unittrustcalculator"
+        applicationId = "com.example.smartdividend"
         minSdk = 24
         targetSdk = 36
         versionCode = 1

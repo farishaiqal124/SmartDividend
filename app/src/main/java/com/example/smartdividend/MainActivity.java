@@ -1,4 +1,4 @@
-package com.example.unittrustcalculator; // UPDATE THIS IF YOUR PACKAGE NAME IS DIFFERENT
+package com.example.smartdividend; // UPDATE THIS IF YOUR PACKAGE NAME IS DIFFERENT
 
 import android.content.Intent;
 import android.os.Bundle;
