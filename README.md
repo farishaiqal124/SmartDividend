@@ -9,6 +9,7 @@
 * [Student Information](#student)
 * [Features](#features)
 * [Screenshots](#screenshots)
+* [Video Presentation](#video)
 * [Installation](#installation)
 * [Requirements](#requirements)
 
@@ -52,6 +53,13 @@ It features a modern, responsive "Mobile First" UI built with Material Design co
 | <img src="screenshots/home.png" width="200"/> | <img src="screenshots/result.png" width="200"/> | <img src="screenshots/about.png" width="200"/> |
 
 *(Note to Lecturer: Please see the `screenshots` folder if images do not render).*
+
+---
+
+## <a name="video"></a>📺 Video Presentation
+A complete demonstration of **SmartDividend**, covering the UI design, functionality test cases, and code walkthrough.
+
+[**▶️ Click Here to Watch the Presentation**](INSERT_YOUR_YOUTUBE_LINK_HERE)
 
 ---
 
