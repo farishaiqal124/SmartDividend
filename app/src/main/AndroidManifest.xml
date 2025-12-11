@@ -10,7 +10,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.UnitTrustCalculator">
+        android:theme="@style/Theme.SmartDividend">
         <activity
             android:name=".AboutActivity"
             android:exported="false"
