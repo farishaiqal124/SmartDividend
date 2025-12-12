@@ -52,7 +52,7 @@ It features a modern, responsive "Mobile First" UI built with Material Design co
 | :---: | :---: | :---: |
 | <img src="screenshots/home.png" width="200"/> | <img src="screenshots/result.png" width="200"/> | <img src="screenshots/about.png" width="200"/> |
 
-*(Note to Lecturer: Please see the `screenshots` folder if images do not render).*
+*(Note: Please see the `screenshots` folder if images do not render).*
 
 ---
 
